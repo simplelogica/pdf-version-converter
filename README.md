@@ -52,6 +52,25 @@ $converter = new GhostscriptConverter($command, $filesystem);
 $converter->convert('/path/to/my/file.pdf', '1.4');
 ```
 
+Converting DOCX to a new PDF version:
+
+```php
+<?php
+// import the namespaces
+use Symfony\Component\Filesystem\Filesystem,
+    Simplelogica\PDFVersionConverter\Converter\UnoconvConverterCommand,
+    Simplelogica\PDFVersionConverter\Converter\UnoconvConverter
+;
+
+// [..]
+
+$command = new UnoconvConverterCommand();
+$filesystem = new Filesystem();
+
+$converter = new UnoconvConverter($command, $filesystem);
+$converter->convert('/path/to/my/file.docx', 0);
+```
+
 ## Contributing
 
 Is really simple add new implementation of guesser or converter , just implement `GuessInterface` or `ConverterInterface`.
