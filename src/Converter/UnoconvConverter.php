@@ -56,10 +56,11 @@ class UnoconvConverter implements ConverterInterface
         return $this->tmp .'/'. uniqid('pdf_version_changer_') . '.pdf';
     }
 
+
     /**
      * {@inheritdoc }
      */
-    public function convert($file, $newVersion)
+    public function convert(string $file, string $newVersion): ?string
     {
         $tmpFile = $this->generateAbsolutePathOfTmpFile();
 
@@ -68,6 +69,12 @@ class UnoconvConverter implements ConverterInterface
         if (!$this->fs->exists($tmpFile))
             throw new \RuntimeException("The generated file '{$tmpFile}' was not found.");
 
-        $this->fs->copy($tmpFile, $file, true);
+        $info = pathinfo($file);
+
+        $newFile = $info['dirname']. '/' .$info['filename'] . '.pdf';
+
+        $this->fs->copy($tmpFile, $newFile, true);
+
+        return $newFile;
     }
 }

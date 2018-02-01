@@ -1,23 +1,20 @@
 # PDF version converter 
 PHP library for converting the version of PDF files (for compatibility purposes).
 
-[![Build Status](https://travis-ci.org/xthiago/pdf-version-converter.svg?branch=master)](https://travis-ci.org/xthiago/pdf-version-converter) 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/33db053e-d59b-4787-9a03-e4ab1e2a7382/mini.png)](https://insight.sensiolabs.com/projects/33db053e-d59b-4787-9a03-e4ab1e2a7382)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4f0a04e3cc2048deb7415cd669dcf2a1)](https://www.codacy.com/app/xthiago/pdf-version-converter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xthiago/pdf-version-converter&amp;utm_campaign=Badge_Grade)
-
 ## Requirements
 
 - PHP 5.3+
 - Ghostscript (gs command on Linux)
+- Unoconv & LibreOffice instaled (for docx conversion to pdf)
 
 ## Installation
 
-Run `php composer.phar require xthiago/pdf-version-converter dev-master` or add the follow lines to composer and run `composer install`:
+Run `php composer.phar require simplelogica/pdf-version-converter dev-master` or add the follow lines to composer and run `composer install`:
 
 ```
 {
     "require": {
-        "xthiago/pdf-version-converter": "dev-master"
+        "simplelogica/pdf-version-converter": "dev-master"
     }
 }
 ```

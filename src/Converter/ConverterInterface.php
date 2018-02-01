@@ -24,5 +24,5 @@ interface ConverterInterface
      * @throws \RuntimeException if something goes wrong.
      * @return void
      */
-    public function convert($file, $newVersion);
+    public function convert(string $file, string $newVersion): ?string ;
 }

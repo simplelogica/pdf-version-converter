@@ -59,7 +59,7 @@ class GhostscriptConverter implements ConverterInterface
     /**
      * {@inheritdoc }
      */
-    public function convert($file, $newVersion)
+    public function convert(string $file, string $newVersion): ?string 
     {
         $tmpFile = $this->generateAbsolutePathOfTmpFile();
 
@@ -69,5 +69,7 @@ class GhostscriptConverter implements ConverterInterface
             throw new \RuntimeException("The generated file '{$tmpFile}' was not found.");
 
         $this->fs->copy($tmpFile, $file, true);
+
+        return $file;
     }
 }
