@@ -13,11 +13,11 @@ namespace Simplelogica\PDFVersionConverter\Converter;
 use Symfony\Component\Filesystem\Filesystem;
 
 /**
- * Converter that uses ghostscript to change PDF version.
+ * Converter that uses unoconv to convert DOCX to PDF
  *
- * @author Thiago Rodrigues <xthiago@gmail.com>
+ * @author Pablo Lozano <lozanomunarriz@gmail.com>
  */
-class GhostscriptConverter implements ConverterInterface
+class UnoconvConverter implements ConverterInterface
 {
     /**
      * @var Filesystem
@@ -25,7 +25,7 @@ class GhostscriptConverter implements ConverterInterface
     protected $fs;
 
     /**
-     * @var GhostscriptConverterCommand
+     * @var UnoconvConverterCommand
      */
     protected $command;
 
@@ -40,7 +40,7 @@ class GhostscriptConverter implements ConverterInterface
      * @param Filesystem $fs
      * @param null|string $tmp
      */
-    public function __construct(GhostscriptConverterCommand $command, Filesystem $fs, $tmp = null)
+    public function __construct(UnoconvConverterCommand $command, Filesystem $fs, $tmp = null)
     {
         $this->command = $command;
         $this->fs = $fs;

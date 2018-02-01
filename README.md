@@ -29,7 +29,7 @@ Guessing a version of PDF File:
 ```php
 <?php
 // import the namespaces
-use Xthiago\PDFVersionConverter\Guesser\RegexGuesser;
+use Simplelogica\PDFVersionConverter\Guesser\RegexGuesser;
 // [..]
 
 $guesser = new RegexGuesser();
@@ -42,8 +42,8 @@ Converting file to a new PDF version:
 <?php
 // import the namespaces
 use Symfony\Component\Filesystem\Filesystem,
-    Xthiago\PDFVersionConverter\Converter\GhostscriptConverterCommand,
-    Xthiago\PDFVersionConverter\Converter\GhostscriptConverter
+    Simplelogica\PDFVersionConverter\Converter\GhostscriptConverterCommand,
+    Simplelogica\PDFVersionConverter\Converter\GhostscriptConverter
 ;
 
 // [..]

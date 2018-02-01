@@ -9,11 +9,15 @@
         {
             "name": "Thiago Rodrigues",
             "email": "xthiago@gmail.com"
+        },
+        {
+            "name": "Pablo Lozano",
+            "email": "lozanomunarriz@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Xthiago\\PDFVersionConverter\\": [
+            "Simplelogica\\PDFVersionConverter\\": [
                 "src/",
                 "tests/"
             ]

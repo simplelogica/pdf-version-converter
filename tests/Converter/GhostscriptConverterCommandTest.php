@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Xthiago\PDFVersionConverter\Converter;
+namespace Simplelogica\PDFVersionConverter\Converter;
 
 use \PHPUnit_Framework_TestCase;
-use Xthiago\PDFVersionConverter\Guesser\RegexGuesser;
+use Simplelogica\PDFVersionConverter\Guesser\RegexGuesser;
 
 /**
  * @author Thiago Rodrigues <xthiago@gmail.com>

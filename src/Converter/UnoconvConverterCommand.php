@@ -13,24 +13,24 @@ namespace Simplelogica\PDFVersionConverter\Converter;
 use Symfony\Component\Process\Process;
 
 /**
- * Encapsulates the knowledge about gs command.
+ * Encapsulates the knowledge about unoconv command.
  *
- * @author Thiago Rodrigues <xthiago@gmail.com>
+ * @author Pablo Lozano <lozanomunarriz@gmail.com>
  */
-class GhostscriptConverterCommand
+class UnoconvConverterCommand
 {
     /**
      * @var Filesystem
      */
-    protected $baseCommand = 'gs -sDEVICE=pdfwrite -dCompatibilityLevel=%s -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=%s %s';
+    protected $baseCommand = 'unoconv -f pdf -o %s -e SelectPdfVersion=%s %s';
 
     public function __construct()
     {
     }
 
-    public function run($originalFile, $newFile, $newVersion)
+    public function run($originalFile, $newFile, $pdfVersion = 0)
     {
-        $command = sprintf($this->baseCommand, $newVersion, $newFile, escapeshellarg($originalFile));
+        $command = sprintf($this->baseCommand, $newFile, $pdfVersion, escapeshellarg($originalFile));
 
         $process = new Process($command);
         $process->run();

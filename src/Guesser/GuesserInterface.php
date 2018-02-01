@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Xthiago\PDFVersionConverter\Guesser;
+namespace Simplelogica\PDFVersionConverter\Guesser;
 
 /**
  * Classes that implements this interface can guess the PDF version of given file.
